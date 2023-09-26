@@ -1,0 +1,126 @@
+@import '_variable';
+// @import "sass/_normalize"; //reset
+// @import "sass/_mixin"; //客製MIXIN
+// @import "sass/_typography"; //CP文字排版
+// @import "sass/_font"; //文字設定
+// @import "sass/_btn"; //按鈕設定
+// @import "sass/_form";
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  margin: 0 auto;
+  max-width: $container-max; //請看_variable.scss
+  // outline: 1px solid red;
+}
+// 橘版
+.version02 {
+  $style: index($sites, version02);
+  background-color: nth($primaryColor, $style);
+  background-image: url('../images/bodybg_orange.jpg');
+  //   _mp.scss
+  .booklistblock {
+    .booklist_group {
+      .booklist {
+        a {
+          &:hover {
+            .number {
+              background-color: nth($linkColor, $style);
+            }
+          }
+          .title {
+            color: nth($linkColor, $style);
+          }
+        }
+      }
+    }
+  }
+  .pageblock {
+    .booklayer {
+      ul {
+        li {
+          &.active {
+            a {
+              background: nth($linkColor, $style);
+              border: darken(nth($linkColor, $style), 5) solid 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .lightboxblock {
+    .title {
+      color: nth($linkColor, $style);
+      border-bottom: 1px solid nth($linkColor, $style);
+    }
+  }
+  //   _paginations.scss
+  .pagination {
+    .page {
+      li {
+        &.active {
+          a {
+            background: nth($linkColor, $style);
+            border: darken(nth($linkColor, $style), 5) solid 1px;
+          }
+        }
+      }
+    }
+  }
+}
+// 綠版
+.version03 {
+  $style: index($sites, version03);
+  background-color: nth($primaryColor, $style);
+  background-image: url('../images/bodybg_green.jpg');
+  //   _mp.scss
+  .booklistblock {
+    .booklist_group {
+      .booklist {
+        a {
+          &:hover {
+            .number {
+              background-color: nth($linkColor, $style);
+            }
+          }
+          .title {
+            color: nth($linkColor, $style);
+          }
+        }
+      }
+    }
+  }
+  .pageblock {
+    .booklayer {
+      ul {
+        li {
+          &.active {
+            a {
+              background: nth($linkColor, $style);
+              border: darken(nth($linkColor, $style), 5) solid 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .lightboxblock {
+    .title {
+      color: nth($linkColor, $style);
+      border-bottom: 1px solid nth($linkColor, $style);
+    }
+  }
+  //   _paginations.scss
+  .pagination {
+    .page {
+      li {
+        &.active {
+          a {
+            background: nth($linkColor, $style);
+            border: darken(nth($linkColor, $style), 5) solid 1px;
+          }
+        }
+      }
+    }
+  }
+}

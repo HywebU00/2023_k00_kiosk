@@ -1,0 +1,50 @@
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.version02 {
+  background-color: #ffbf3c;
+  background-image: url("../images/bodybg_orange.jpg");
+}
+.version02 .booklistblock .booklist_group .booklist a:hover .number {
+  background-color: #6d3910;
+}
+.version02 .booklistblock .booklist_group .booklist a .title {
+  color: #6d3910;
+}
+.version02 .pageblock .booklayer ul li.active a {
+  background: #6d3910;
+  border: #572d0d solid 1px;
+}
+.version02 .lightboxblock .title {
+  color: #6d3910;
+  border-bottom: 1px solid #6d3910;
+}
+.version02 .pagination .page li.active a {
+  background: #6d3910;
+  border: #572d0d solid 1px;
+}
+
+.version03 {
+  background-color: #4bded0;
+  background-image: url("../images/bodybg_green.jpg");
+}
+.version03 .booklistblock .booklist_group .booklist a:hover .number {
+  background-color: #028177;
+}
+.version03 .booklistblock .booklist_group .booklist a .title {
+  color: #028177;
+}
+.version03 .pageblock .booklayer ul li.active a {
+  background: #028177;
+  border: #026860 solid 1px;
+}
+.version03 .lightboxblock .title {
+  color: #028177;
+  border-bottom: 1px solid #028177;
+}
+.version03 .pagination .page li.active a {
+  background: #028177;
+  border: #026860 solid 1px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,356 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// more按鈕
+a.more {
+  display: block;
+  width: 10em;
+  text-align: center;
+  height: 2.5em;
+  margin: 0.5em auto 0.5em;
+  line-height: 2.5;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  &:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -10px;
+    top: 14px;
+    border-left: none;
+    border-bottom: none;
+    transition: 0.3s ease-out;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $primaryColor;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  &:hover,
+  &:focus,
+  &.active {
+    color: white;
+    &:before {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    &:after {
+      right: 15px;
+    }
+  }
+}
+
+// 範例：
+// .demosection {
+//     [class^='col'] {
+//         border: 2px solid #fff;
+//         background: #dedede;
+//     }
+// }
+.booklistblock {
+  padding-top: 30px;
+  .container {
+    padding: 0 20px;
+  }
+  .booklist_group {
+    display: flex;
+    flex-wrap: wrap;
+    .booklist {
+      flex: 0 0 auto;
+      flex-basis: 15%;
+      margin: 0 0.83% 1.5em;
+      @media (max-width: 1400px) {
+        flex-basis: 31%;
+        margin: 0 1.166% 1.5em;
+      }
+
+      a {
+        display: block;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 25px #ccc inset;
+        text-decoration: none;
+        font-weight: bolder;
+        transition: 0.5s;
+        &:hover {
+          box-shadow: 0 0 35px #999 inset;
+          .number {
+            background-color: nth($linkColor, $style);
+            color: #fff;
+          }
+        }
+        .number {
+          background-color: #e5e5e5;
+          color: #333;
+          font-size: 1.375rem;
+          text-align: center;
+          padding: 0.5em;
+          margin-bottom: 0;
+          border-radius: 10px 10px 0 0;
+          transition: 0.5s;
+        }
+        .content {
+          padding: 15px 30px;
+        }
+        .bookcover {
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 1em;
+          height: 200px;
+          //   outline: 1px solid red;
+          img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            object-fit: contain;
+          }
+        }
+        .title {
+          color: nth($linkColor, $style);
+          margin-bottom: 0.8em;
+          @include text-line(2, 23px);
+          font-size: 1.125rem;
+        }
+        .author {
+          color: #333;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
+// 按鈕
+.pagebtn {
+  button {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50% !important;
+    margin: -80px 0 0 0;
+    padding: 0;
+    font-size: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    top: 52%;
+    z-index: 9;
+    @media (max-width: 1400px) {
+      top: 50%;
+    }
+    &.prev {
+      background-image: url('../images/arrowleft.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60px;
+
+      left: 20px;
+    }
+    &.next {
+      background-image: url('../images/arrowright.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60px;
+
+      right: 20px;
+    }
+    &:hover {
+      background-color: nth($lightColor, $style);
+    }
+  }
+}
+// page
+.pageblock {
+  padding: 0;
+  position: relative;
+  @media (max-width: 1400px) {
+    padding: 1em 0 0.5em;
+  }
+  .booklayer {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 2px;
+        a {
+          display: block;
+          padding: 0.5em 1em;
+          background-color: #fff;
+          color: #000;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          &:hover {
+            background-color: #ccc;
+            border: 1px solid #ccc;
+          }
+        }
+        &.active {
+          a {
+            color: #fff !important;
+            background: nth($linkColor, $style);
+            border: darken(nth($linkColor, $style), 5) solid 1px;
+          }
+        }
+      }
+    }
+  }
+  .qrcodeblock {
+    position: absolute;
+    right: 40px;
+    bottom: 0px;
+    @media (max-width: 1400px) {
+      bottom: 10px;
+    }
+  }
+}
+// 燈箱
+.lightboxblock {
+  background-color: #fff;
+  display: none;
+
+  &.widen {
+    width: 70vw;
+    height: 40vw;
+    @media (max-width: 1400px) {
+      height: 80vw;
+      width: 70vw;
+    }
+  }
+  .fancybox-button {
+    width: 60px;
+    height: 60px;
+  }
+  .title {
+    color: nth($linkColor, $style);
+    font-size: 1.625rem;
+    font-weight: bolder;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid nth($linkColor, $style);
+  }
+  .content {
+    padding: 20px 0;
+
+    .numbe {
+      display: flex;
+      margin-bottom: 2em;
+      input {
+        flex: 0 0 auto;
+        flex-basis: 23%;
+        margin: 0 1% 8px;
+        width: 1em;
+        margin-right: 5px;
+        border: none;
+        border-radius: 0;
+        padding: 0.5em 0;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+      }
+    }
+    .numkey {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          flex: 0 0 auto;
+          flex-basis: 31%;
+          margin: 0 1.167% 8px;
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2.5em;
+            padding: 0 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            color: $color-word;
+            font-size: 1.25rem;
+            img {
+              width: 1.7em;
+            }
+
+            &:focus {
+              background-color: #ccc;
+              //   color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .lightbox_list {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          padding: 0.8em 0;
+          border-bottom: 1px solid #ccc;
+          font-size: 1.25em;
+          line-height: 1.5;
+          span {
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+    .qrcodegroup {
+      text-align: center;
+      outline: 1px solid #999;
+      padding: 3em;
+      .qrcodeimg {
+        width: 90%;
+        margin: 0 auto 3em;
+        img {
+          width: 100%;
+        }
+      }
+      .unitname {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+}
+.fancybox-active {
+  height: 100%;
+  overflow: hidden !important;
+  width: 100%;
+  position: fixed;
+}
