@@ -1856,6 +1856,31 @@ kbd kbd {
   cursor: pointer;
 }
 
+.btn-gray {
+  background: #666;
+  border: 1px solid #666;
+  color: #fff;
+}
+.btn-gray:hover {
+  background: #4d4d4d;
+  border: 1px solid #333333;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+}
+.btn-gray:focus {
+  background: #4d4d4d;
+  border: 1px solid #333333;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0px 0px 2px #ff3e4d !important;
+}
+.btn-gray.active {
+  background: #737373;
+  cursor: pointer;
+}
+
 .btn-submit {
   background: #5ed5ee;
   border: 1px solid #5ed5ee;
@@ -4813,6 +4838,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .lightboxblock {
   background-color: #fff;
   display: none;
+  position: relative;
 }
 .lightboxblock.widen {
   width: 70vw;
@@ -4838,6 +4864,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .lightboxblock .content {
   padding: 20px 0;
+  position: relative;
 }
 .lightboxblock .content .numbe {
   display: flex;
@@ -4915,6 +4942,26 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .lightboxblock .content .qrcodegroup .unitname {
   font-size: 2rem;
   text-align: center;
+}
+.lightboxblock .content .noinformation {
+  background-color: #eee;
+  color: #333;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.lightboxblock .content .noinformation button {
+  margin-top: 1em;
 }
 
 .fancybox-active {

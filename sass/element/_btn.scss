@@ -98,6 +98,10 @@ $btn-radius: 0.2em;
   // @extend %btn;
   @include btn_setting(lighten($color-purple, 5), #fff);
 }
+.btn-gray {
+  // @extend %btn;
+  @include btn_setting($color-hr, #fff);
+}
 .btn-submit {
   // @extend %btn;
   @include btn_setting(lighten(nth($primaryColor, $style), 5), #fff);
