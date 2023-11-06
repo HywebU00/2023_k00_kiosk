@@ -21,6 +21,10 @@
   color: #6d3910;
   border-bottom: 1px solid #6d3910;
 }
+.version02 .lightboxstyle_block .lightboxstyle_group .title {
+  color: #6d3910;
+  border-bottom: 1px solid #6d3910;
+}
 .version02 .pagination .page li.active a {
   background: #6d3910;
   border: #572d0d solid 1px;
@@ -41,6 +45,10 @@
   border: #026860 solid 1px;
 }
 .version03 .lightboxblock .title {
+  color: #028177;
+  border-bottom: 1px solid #028177;
+}
+.version03 .lightboxstyle_block .lightboxstyle_group .title {
   color: #028177;
   border-bottom: 1px solid #028177;
 }

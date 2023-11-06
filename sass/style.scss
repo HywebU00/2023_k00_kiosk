@@ -54,6 +54,14 @@
       border-bottom: 1px solid nth($linkColor, $style);
     }
   }
+  .lightboxstyle_block {
+    .lightboxstyle_group {
+      .title {
+        color: nth($linkColor, $style);
+        border-bottom: 1px solid nth($linkColor, $style);
+      }
+    }
+  }
   //   _paginations.scss
   .pagination {
     .page {
@@ -108,6 +116,14 @@
     .title {
       color: nth($linkColor, $style);
       border-bottom: 1px solid nth($linkColor, $style);
+    }
+  }
+  .lightboxstyle_block {
+    .lightboxstyle_group {
+      .title {
+        color: nth($linkColor, $style);
+        border-bottom: 1px solid nth($linkColor, $style);
+      }
     }
   }
   //   _paginations.scss

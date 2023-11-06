@@ -100,7 +100,7 @@
               </div>
               <!-- 2 -->
               <div class="booklist">
-                <a href="#">
+                <a href="#" class="bookinformation_btn">
                   <div class="number">架號：2023</div>
                   <div class="content">
                     <div class="bookcover"><img src="images/book/bookcover02.png" alt=""></div>
@@ -221,9 +221,9 @@
               </div>
               <!--  -->
             </div>
-            <!-- 燈箱start -->
+            <!-- fancybox 燈箱start -->
             <div class="lightboxblock widen" id="moda2">
-              <div class="title">書籍資訊</div>
+              <div class="title">書籍資訊fancybox</div>
               <div class="content">
                 <div class="lightbox_list">
                   <ul>
@@ -242,7 +242,31 @@
                 </div>
               </div>
             </div>
-            <!-- 燈箱end -->
+            <!-- fancybox 燈箱end -->
+            <!-- WebpacX 燈箱start -->
+            <div class="lightboxstyle_block" id="bookinformation">
+              <div class="overlay"></div>
+              <div class="lightboxstyle_group">
+                <div class="close"><a href="#">關閉</a></div>
+                <div class="title">書籍資訊WebpacX</div>
+                <div class="lightbox_data">
+                  <ul>
+                    <li><span>架號：</span>2022</li>
+                    <li><span>題名：</span>我想跟你好好說話：賴佩霞的六堂「非暴力溝通」入門課</li>
+                    <li><span>作者：</span>賴佩霞</li>
+                    <li><span>出版年：</span>2022</li>
+                    <li><span>書籍簡介：</span>
+                      <p>親子、夫妻、婆媳、師生、團隊，該如何「好好說話」？
+                        金惟純真情推薦：離苦得樂、圓滿人生的殊勝法門
+                        賴佩霞沉潛多年最新作品 名人藝人熱推！</p>
+                      <p>親愛的你，別因為一再失敗的溝通，而把自己鎖在悲傷、寂寞、孤獨的空間裡。</p>
+                      <p>另一種人則不那麼重視對與錯，他們追求的是美好人生，只關心該做什麼、說什麼，讓自己的人生更美好（How can I make life more wonderful）？他們知道，人生的好運、福氣不會從天上掉下來，是必須認真用心經營的，也因此他們心靈更平靜、更樂於學習、更常傾聽、更誠懇表達自己、與家人更緊密。</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- WebpacX 燈箱end -->
           </div>
         </div>
       </section>
@@ -296,8 +320,12 @@
   <a href="javascript:;" class="scrollToTop">回頁首</a>
   <!-- JQ -->
   <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 外掛 plugin js -->
+  <script src="vendor/jquery.easing.min.js"></script>
   <!-- fancy -->
   <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
 
 </body>
 

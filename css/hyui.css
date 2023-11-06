@@ -4532,6 +4532,12 @@ body.noscroll {
   margin: 0;
   padding: 0;
 }
+body.fixed {
+  height: 100%;
+  overflow: hidden !important;
+  width: 100%;
+  position: fixed;
+}
 
 .wrapper {
   width: 100%;
@@ -4969,4 +4975,84 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   overflow: hidden !important;
   width: 100%;
   position: fixed;
+}
+
+.lightboxstyle_block {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  display: none;
+}
+.lightboxstyle_block .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.lightboxstyle_block .lightboxstyle_group {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  margin: auto;
+  background-color: #fff;
+  width: 70vw;
+  height: 40vw;
+}
+@media (max-width: 1400px) {
+  .lightboxstyle_block .lightboxstyle_group {
+    height: 80vw;
+    width: 70vw;
+  }
+}
+.lightboxstyle_block .lightboxstyle_group .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.lightboxstyle_block .lightboxstyle_group .close a {
+  background-image: url("../images/icon_close_black.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  font-size: 0;
+}
+.lightboxstyle_block .lightboxstyle_group .title {
+  color: #005d98;
+  font-size: 1.625rem;
+  font-weight: bolder;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #005d98;
+}
+.lightboxstyle_block .lightboxstyle_group .lightbox_data {
+  padding: 20px 0;
+  position: relative;
+  overflow-y: auto;
+  height: 92%;
+}
+.lightboxstyle_block .lightboxstyle_group .lightbox_data ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.lightboxstyle_block .lightboxstyle_group .lightbox_data ul li {
+  padding: 0.8em 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+.lightboxstyle_block .lightboxstyle_group .lightbox_data ul li span {
+  font-weight: bolder;
 }/*# sourceMappingURL=hyui.css.map */
