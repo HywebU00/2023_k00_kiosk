@@ -89,7 +89,14 @@ a.more {
         flex-basis: 31%;
         margin: 0 1.166% 1.5em;
       }
-
+      @media (max-width: 992px) {
+        flex-basis: 48%;
+        margin: 0 1% 1.5em;
+      }
+      @media (max-width: 600px) {
+        flex-basis: 100%;
+        margin: 0 0 1.5em;
+      }
       a {
         display: block;
         background-color: #fff;
@@ -167,6 +174,11 @@ a.more {
     @media (max-width: 1400px) {
       top: 50%;
     }
+    @include screen('xs_mobile') {
+      width: 60px;
+      height: 60px;
+      top: 60%;
+    }
     &.prev {
       background-image: url('../images/arrowleft.png');
       background-repeat: no-repeat;
@@ -202,6 +214,10 @@ a.more {
       list-style-type: none;
       display: flex;
       justify-content: center;
+      @include screen('mobile') {
+        flex-wrap: wrap;
+      }
+
       li {
         margin: 2px;
         a {
@@ -233,6 +249,11 @@ a.more {
     @media (max-width: 1400px) {
       bottom: 10px;
     }
+    @include screen('tablet') {
+      position: relative;
+      text-align: center;
+      right: auto;
+    }
   }
 }
 // fancybox燈箱
@@ -247,6 +268,10 @@ a.more {
     @media (max-width: 1400px) {
       height: 80vw;
       width: 70vw;
+    }
+    @include screen('mobile') {
+      height: 100%;
+      width: 100vw;
     }
   }
   .fancybox-button {
@@ -363,6 +388,9 @@ a.more {
       display: block;
       z-index: 99;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include screen('mobile') {
+        width: 100%;
+      }
       button {
         margin-top: 1em;
       }
@@ -409,7 +437,11 @@ a.more {
       height: 80vw;
       width: 70vw;
     }
-
+    @include screen('mobile') {
+      padding: 40px 20px;
+      height: 100%;
+      width: 100vw;
+    }
     .close {
       position: absolute;
       right: 15px;

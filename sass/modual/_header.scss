@@ -11,6 +11,12 @@
   @include screen('mobile') {
     position: fixed;
     width: 100%;
+    background-image: url(../images/bodybg.jpg);
+    background-color: nth($primaryColor, $style);
+    background-repeat: no-repeat;
+    background-position: center top;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-size: 100%;
   }
 
   // mobile btn for extend
@@ -38,7 +44,8 @@
     overflow: visible;
     position: relative; // menu
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     .sidebarCtrl {
@@ -99,6 +106,9 @@
       width: 280px;
       height: 64px;
     }
+    @include screen('xs_mobile') {
+      margin: 0 auto;
+    }
   }
   h1 {
     flex: 1 1 auto;
@@ -107,6 +117,13 @@
     padding: 0;
     text-align: center;
     line-height: 1.2;
+    @include screen('mobile') {
+      font-size: 2.3rem;
+    }
+    @include screen('xs_mobile') {
+      font-size: 1.75rem;
+      // text-align: left;
+    }
   }
   // 導覽列
   //   .navigation {
@@ -152,7 +169,11 @@
 
 //search
 .search {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  text-align: right;
+  @include screen('xs_mobile') {
+    text-align: center;
+  }
   .searchbtn {
     font-size: 1.75rem;
     background-color: $lightColor;
@@ -162,5 +183,13 @@
     background-image: url('../images/icon_search.png');
     background-repeat: no-repeat;
     background-position: 16px center;
+    @include screen('mobile') {
+      font-size: 1.5rem;
+    }
+    @include screen('xs_mobile') {
+      padding: 8px 8px 8px 40px;
+      background-position: 8px center;
+      font-size: 1.125rem;
+    }
   }
 }

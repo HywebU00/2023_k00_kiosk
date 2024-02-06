@@ -7,6 +7,12 @@
   background-color: #ffbf3c;
   background-image: url("../images/bodybg_orange.jpg");
 }
+@media (max-width: 767px) {
+  .version02 .header {
+    background-image: url(../images/bodybg_orange.jpg);
+    background-color: #ffbf3c;
+  }
+}
 .version02 .booklistblock .booklist_group .booklist a:hover .number {
   background-color: #6d3910;
 }
@@ -33,6 +39,12 @@
 .version03 {
   background-color: #4bded0;
   background-image: url("../images/bodybg_green.jpg");
+}
+@media (max-width: 767px) {
+  .version03 .header {
+    background-image: url(../images/bodybg_green.jpg);
+    background-color: #4bded0;
+  }
 }
 .version03 .booklistblock .booklist_group .booklist a:hover .number {
   background-color: #028177;

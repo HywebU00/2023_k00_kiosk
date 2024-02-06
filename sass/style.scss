@@ -17,6 +17,13 @@
   $style: index($sites, version02);
   background-color: nth($primaryColor, $style);
   background-image: url('../images/bodybg_orange.jpg');
+  //   _header.scss
+  .header {
+    @media (max-width: 767px) {
+      background-image: url(../images/bodybg_orange.jpg);
+      background-color: nth($primaryColor, $style);
+    }
+  }
   //   _mp.scss
   .booklistblock {
     .booklist_group {
@@ -81,6 +88,13 @@
   $style: index($sites, version03);
   background-color: nth($primaryColor, $style);
   background-image: url('../images/bodybg_green.jpg');
+  //   _header.scss
+  .header {
+    @media (max-width: 767px) {
+      background-image: url(../images/bodybg_green.jpg);
+      background-color: nth($primaryColor, $style);
+    }
+  }
   //   _mp.scss
   .booklistblock {
     .booklist_group {

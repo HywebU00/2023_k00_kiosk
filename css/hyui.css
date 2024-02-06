@@ -2042,6 +2042,12 @@ kbd kbd {
   .header {
     position: fixed;
     width: 100%;
+    background-image: url(../images/bodybg.jpg);
+    background-color: #47cfeb;
+    background-repeat: no-repeat;
+    background-position: center top;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-size: 100%;
   }
 }
 .header > .container .searchCtrl, .header > .container .sidebarCtrl {
@@ -2070,7 +2076,7 @@ kbd kbd {
   overflow: visible;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 15px 30px;
 }
@@ -2129,6 +2135,11 @@ kbd kbd {
   width: 280px;
   height: 64px;
 }
+@media screen and (max-width: 575px) {
+  .header .logo {
+    margin: 0 auto;
+  }
+}
 .header h1 {
   flex: 1 1 auto;
   font-size: 3.125rem;
@@ -2137,9 +2148,25 @@ kbd kbd {
   text-align: center;
   line-height: 1.2;
 }
+@media screen and (max-width: 767px) {
+  .header h1 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header h1 {
+    font-size: 1.75rem;
+  }
+}
 
 .search {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  text-align: right;
+}
+@media screen and (max-width: 575px) {
+  .search {
+    text-align: center;
+  }
 }
 .search .searchbtn {
   font-size: 1.75rem;
@@ -2150,6 +2177,18 @@ kbd kbd {
   background-image: url("../images/icon_search.png");
   background-repeat: no-repeat;
   background-position: 16px center;
+}
+@media screen and (max-width: 767px) {
+  .search .searchbtn {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .search .searchbtn {
+    padding: 8px 8px 8px 40px;
+    background-position: 8px center;
+    font-size: 1.125rem;
+  }
 }
 
 .R {
@@ -4563,6 +4602,11 @@ body.fixed {
   margin: 0 30px 0;
   border-radius: 10px;
 }
+@media screen and (max-width: 767px) {
+  .main {
+    padding-top: 180px;
+  }
+}
 .main h2 {
   line-height: 1.25em;
 }
@@ -4693,6 +4737,18 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     margin: 0 1.166% 1.5em;
   }
 }
+@media (max-width: 992px) {
+  .booklistblock .booklist_group .booklist {
+    flex-basis: 48%;
+    margin: 0 1% 1.5em;
+  }
+}
+@media (max-width: 600px) {
+  .booklistblock .booklist_group .booklist {
+    flex-basis: 100%;
+    margin: 0 0 1.5em;
+  }
+}
 .booklistblock .booklist_group .booklist a {
   display: block;
   background-color: #fff;
@@ -4776,6 +4832,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     top: 50%;
   }
 }
+@media screen and (max-width: 575px) {
+  .pagebtn button {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+  }
+}
 .pagebtn button.prev {
   background-image: url("../images/arrowleft.png");
   background-repeat: no-repeat;
@@ -4810,6 +4873,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  .pageblock .booklayer ul {
+    flex-wrap: wrap;
+  }
+}
 .pageblock .booklayer ul li {
   margin: 2px;
 }
@@ -4840,6 +4908,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     bottom: 10px;
   }
 }
+@media screen and (max-width: 991px) {
+  .pageblock .qrcodeblock {
+    position: relative;
+    text-align: center;
+    right: auto;
+  }
+}
 
 .lightboxblock {
   background-color: #fff;
@@ -4854,6 +4929,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   .lightboxblock.widen {
     height: 80vw;
     width: 70vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lightboxblock.widen {
+    height: 100%;
+    width: 100vw;
   }
 }
 .lightboxblock .fancybox-button {
@@ -4966,6 +5047,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   z-index: 99;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+@media screen and (max-width: 767px) {
+  .lightboxblock .content .noinformation {
+    width: 100%;
+  }
+}
 .lightboxblock .content .noinformation button {
   margin-top: 1em;
 }
@@ -5010,6 +5096,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   .lightboxstyle_block .lightboxstyle_group {
     height: 80vw;
     width: 70vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lightboxstyle_block .lightboxstyle_group {
+    padding: 40px 20px;
+    height: 100%;
+    width: 100vw;
   }
 }
 .lightboxstyle_block .lightboxstyle_group .close {
